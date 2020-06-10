@@ -1,2 +1,3 @@
 text
 minjae test
+정상작동 확인 완료
