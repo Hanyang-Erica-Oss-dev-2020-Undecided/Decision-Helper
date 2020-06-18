@@ -1,6 +1,0 @@
-<<<<<<< HEAD
-Decision-Helper
-Pull request
-=======
-안녕하세요
->>>>>>> 021fde008aa2cbe8ca480cf32792e56f5af836c1
