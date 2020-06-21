@@ -134,11 +134,11 @@ public class LadderGameMain extends AppCompatActivity {
             if( mi.mEditName.getText().toString().length() < 1 ) {
                 // 사람 이름 일때
                 if( position <= mPeopleMax )
-                    mi.mEditName.setText("People-" + position);
+                    mi.mEditName.setText("Add Menu");
                     // 벌칙 이름 일때
                 else {
                     int index = position - mPeopleMax - 1;
-                    mi.mEditName.setText("Present-" + index);
+                    mi.mEditName.setText("순위" + index);
                 }
             }
 
@@ -162,22 +162,22 @@ public class LadderGameMain extends AppCompatActivity {
         initListView();
 
         // '이름' 입력 제목
-        MyItem mi = new MyItem("Input Name", true);
+        MyItem mi = new MyItem("항목", true);
         mArMember.add(mi);
 
         // 이름 개수 만큼 항목 추가
         for(int i=0; i < mPeopleMax; i++) {
-            mi = new MyItem("Name-" + (i+1), false);
+            mi = new MyItem("항목 " + (i+1), false);
             mArMember.add(mi);
         }
 
         // '벌칙' 입력 제목
-        mi = new MyItem("Input Present", true);
+        mi = new MyItem("우선 순위", true);
         mArMember.add(mi);
 
         // 벌칙 개수 만큼 항목 추가
         for(int i=0; i < mPeopleMax; i++) {
-            mi = new MyItem("Present-" + (i+1), false);
+            mi = new MyItem("순위 "+(i+1), false);
             mArMember.add(mi);
         }
 
@@ -237,18 +237,18 @@ public class LadderGameMain extends AppCompatActivity {
             // '이름' 항목일때
             if( isPresent == false ) {
                 if( mi.mEditName == null )
-                    strEdit = "Name" + (itemNumber+1);
+                    strEdit = "항목 " + (itemNumber+1);
                 else
                     strEdit = mi.mEditName.getText().toString();
-                intent.putExtra("Name" + itemNumber, strEdit);
+                intent.putExtra("항목" + itemNumber, strEdit);
             }
             // '벌칙' 항목일때
             else {
                 if( mi.mEditName == null )
-                    strEdit = "Present" + (itemNumber+1);
+                    strEdit = "순위"+(itemNumber+1);
                 else
                     strEdit = mi.mEditName.getText().toString();
-                intent.putExtra("Present" + itemNumber, strEdit);
+                intent.putExtra("순위"+itemNumber, strEdit);
             }
             itemNumber ++;
         }

@@ -31,11 +31,6 @@ public class ResultActivity extends AppCompatActivity {
 
     // ListView 위젯에 결과 항목을 추가
     public void initListView(Intent intent) {
-        //String[] strTextList = {"Seoul", "Tokyo", "Newyork", "Londeon",
-        //        "Baijing", "Kongga", "Moscuba", "Singgapol", "Pusan", "Hongkong"};
-        // ArrayList 에 10개 텍스트 데이터를 추가
-        //for(int i=0 ; i < 10 ; i ++)
-        //    mArGeneral.add(strTextList[i]);
         int peopleMax = intent.getIntExtra("PeopleMax", 0);
         if( peopleMax < 2 )
             return;
