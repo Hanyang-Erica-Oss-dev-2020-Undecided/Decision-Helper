@@ -54,7 +54,7 @@ public class LadderGameActivity extends AppCompatActivity {
 
         // '이름' 목록 추출
         for(int i=0; i < mPeopleMax; i++) {
-            String strName = intent.getStringExtra("Name" + i);
+            String strName = intent.getStringExtra("항목" + i);
             PeopleInfo pi = new PeopleInfo(strName, i);
             mArPeople.add(pi);
             //mArPeople.add(strName);
@@ -62,7 +62,7 @@ public class LadderGameActivity extends AppCompatActivity {
 
         // '벌칙' 목록 추출
         for(int i=0; i < mPeopleMax; i++) {
-            String strPresent = intent.getStringExtra("Present" + i);
+            String strPresent = intent.getStringExtra("순위"+i);
             mArPresent.add(strPresent);
         }
 
@@ -169,7 +169,7 @@ public class LadderGameActivity extends AppCompatActivity {
 
         // 사각형 영역 안에 텍스트 출력
         public void drawText(Canvas canvas, Rect rtArea, String strText) {
-            int fontSize = rtArea.width() / 7;
+            int fontSize = rtArea.width() / 10;
             Paint pnt = new Paint();
             pnt.setTextAlign(Paint.Align.CENTER);
             // 텍스트 폰트 크기를 지정
@@ -270,7 +270,7 @@ public class LadderGameActivity extends AppCompatActivity {
     // 게임 시작
     public void startLadder() {
         // 타이머 시작
-        mTimer.sendEmptyMessageDelayed(0, 10);
+        mTimer.sendEmptyMessageDelayed(0, 5);
     }
 
     // 게임 완료 여부를 구해서 반환
@@ -396,7 +396,7 @@ public class LadderGameActivity extends AppCompatActivity {
             }
             // 게임이 완료되었다면
             else {
-                Toast.makeText(getApplicationContext(), "Game Completed", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "우선 선위 설정 완료", Toast.LENGTH_SHORT).show();
                 // 게임 완료 이벤트 함수
                 onGameCompleted();
             }
