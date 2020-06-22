@@ -29,6 +29,12 @@
         </activity>
         <activity android:name=".RegisterActivity" />
         <activity android:name=".MainActivity" />
+        <activity android:name=".ResultActivity"
+            android:theme="@style/Base.Theme.AppCompat.Light.Dialog"></activity>
+        <activity android:name=".LadderGameMain">
+        </activity>
+        <activity android:name=".LadderGameActivity">
+        </activity>
     </application>
 
 </manifest>
