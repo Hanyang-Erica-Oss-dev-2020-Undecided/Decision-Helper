@@ -1,7 +1,7 @@
 # Decision-Helper #
 What are we going to eat today? What will I do tomorrow? Do you have any difficulty choosing? 
-This application will help you choose.
 
+This application will help you choose.
 
 ## Information ##
 Version : 1.0
