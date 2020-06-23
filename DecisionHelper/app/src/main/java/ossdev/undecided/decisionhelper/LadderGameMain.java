@@ -162,7 +162,7 @@ public class LadderGameMain extends AppCompatActivity {
         initListView();
 
         // '이름' 입력 제목
-        MyItem mi = new MyItem("항목", true);
+        MyItem mi = new MyItem("항목 (작성)", true);
         mArMember.add(mi);
 
         // 이름 개수 만큼 항목 추가
