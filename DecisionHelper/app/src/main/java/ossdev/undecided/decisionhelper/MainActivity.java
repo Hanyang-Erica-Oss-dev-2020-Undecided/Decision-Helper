@@ -10,26 +10,28 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextView tv_id, tv_pass;
+    private TextView tv_name, tv_mention;
+    private Button btn_ladder;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        tv_id = findViewById(R.id.tv_id);
-        tv_pass = findViewById(R.id.tv_pass);
+        tv_name = findViewById(R.id.tv_name);
+        tv_mention = findViewById(R.id.tv_mention);
+        btn_ladder = findViewById(R.id.btn_ladder);
 
         Intent intent = getIntent();
-        String userID = intent.getStringExtra("userID");
-        String userPass = intent.getStringExtra("userPass");
-
-        tv_id.setText(userID);
-        tv_pass.setText(userPass);
+        String userName = intent.getStringExtra("userName");
 
 
-        Button Ladder = (Button) findViewById(R.id.Ladder);
-        Ladder.setOnClickListener(new View.OnClickListener(){
+        tv_name.setText("Welcome " + userName);
+        tv_mention.setText("We will help your decision by ladder game");
+        btn_ladder.setText("Start Ladder Game");
+
+
+        btn_ladder.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
                 Ladder_activity();
