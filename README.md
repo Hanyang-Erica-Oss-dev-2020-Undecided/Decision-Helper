@@ -17,8 +17,8 @@ Version : 1.0
 - How to use
 
 ## Documentation ##
-[Developer-Document](https://github.com/Hanyang-Erica-Oss-dev-2020-Undecided/Decision-Helper/blob/develop/DeveloperDocument.md)
-[Coding-Convention](https://github.com/Hanyang-Erica-Oss-dev-2020-Undecided/Decision-Helper/blob/develop/CodingConvention.md)
++ [Developer-Document](https://github.com/Hanyang-Erica-Oss-dev-2020-Undecided/Decision-Helper/blob/develop/DeveloperDocument.md)
++ [Coding-Convention](https://github.com/Hanyang-Erica-Oss-dev-2020-Undecided/Decision-Helper/blob/develop/CodingConvention.md)
 
 ## Contribute ##
 [Contribute](https://github.com/Hanyang-Erica-Oss-dev-2020-Undecided/Decision-Helper/blob/develop/contribute.md)
