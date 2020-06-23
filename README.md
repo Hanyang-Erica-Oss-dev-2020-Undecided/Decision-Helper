@@ -2,6 +2,13 @@
 What are we going to eat today? What will I do tomorrow? Do you have any difficulty choosing? 
 
 This application will help you choose.
+## contents ##
++ [Information](information)
++ [Documentation](documentation)
++ [Contribute](contribute)
++ [Web Site](web-site)
++ [Team](team)
++ [License](license)
 
 ## Information ##
 Version : 1.0
@@ -10,16 +17,16 @@ Version : 1.0
 - How to use
 
 ## Documentation ##
-[Developer-Document](https://github.com/nadasansu/Decision-Helper/blob/develop/DeveloperDocument.md)
+[Developer-Document](https://github.com/Hanyang-Erica-Oss-dev-2020-Undecided/Decision-Helper/blob/develop/DeveloperDocument.md)
+[Coding-Convention](https://github.com/Hanyang-Erica-Oss-dev-2020-Undecided/Decision-Helper/blob/develop/CodingConvention.md)
 
-
-## Conrtribute ##
-
+## Contribute ##
+[Contribute](https://github.com/Hanyang-Erica-Oss-dev-2020-Undecided/Decision-Helper/blob/develop/contribute.md)
 
 ## Web Site ##
 [Web](https://hanyang-erica-oss-dev-2020-undecided.github.io/DecisionHelper_Webpage/theme/index.html)
 
-## Our Team ##
+## Team ##
 **Team Name : Undecided**
 |**ID**|**Name**|
 |---|---|
