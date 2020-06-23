@@ -53,7 +53,7 @@ public class LadderGameActivity extends AppCompatActivity {
         mPeopleMax = intent.getIntExtra("PeopleMax", 2);
 
         // '이름' 목록 추출
-        for(int i=0; i < mPeopleMax; i++) {
+        for (int i = 0; i < mPeopleMax; i++) {
             String strName = intent.getStringExtra("항목" + i);
             PeopleInfo pi = new PeopleInfo(strName, i);
             mArPeople.add(pi);
@@ -61,8 +61,8 @@ public class LadderGameActivity extends AppCompatActivity {
         }
 
         // '벌칙' 목록 추출
-        for(int i=0; i < mPeopleMax; i++) {
-            String strPresent = intent.getStringExtra("순위"+i);
+        for (int i = 0; i < mPeopleMax; i++) {
+            String strPresent = intent.getStringExtra("순위" + i);
             mArPresent.add(strPresent);
         }
 
@@ -71,7 +71,7 @@ public class LadderGameActivity extends AppCompatActivity {
 
     // 버튼 클릭 이벤트 함수
     public void onClick(View v) {
-        switch(v.getId()) {
+        switch (v.getId()) {
             case R.id.btnGameStart :
                 // 게임 시작
                 startLadder();
@@ -87,7 +87,7 @@ public class LadderGameActivity extends AppCompatActivity {
 
         public void onDraw(Canvas canvas) {
             // 게임이 생성되지 않았다면 게임 생성
-            if( mArHBar == null) {
+            if (mArHBar == null) {
                 createGame(canvas);
             }
             canvas.drawColor(Color.LTGRAY);
@@ -134,7 +134,7 @@ public class LadderGameActivity extends AppCompatActivity {
             pnt.setStrokeWidth(mCanvasW / 80);
             pnt.setColor(Color.rgb(255, 100, 100));
 
-            for( int i=0; i < mPeopleMax; i++) {
+            for (int i = 0; i < mPeopleMax; i++) {
                 Rect rtPart = getLadderPartArea(i);
                 canvas.drawLine(rtPart.centerX(), rtPart.top, rtPart.centerX(), rtPart.bottom, pnt);
             }
@@ -156,7 +156,7 @@ public class LadderGameActivity extends AppCompatActivity {
             pnt.setStyle(Paint.Style.FILL);
             pnt.setColor(Color.rgb(255, 255, 160));*/
 
-            for( int i=0; i < mPeopleMax; i++) {
+            for (int i = 0; i < mPeopleMax; i++) {
                 // 벌칙 개별 영역 좌표를 반환
                 Rect rtPresentPart = getPresentPartArea(i);
                 // 둥근 사각형 그리기
@@ -169,7 +169,7 @@ public class LadderGameActivity extends AppCompatActivity {
 
         // 사각형 영역 안에 텍스트 출력
         public void drawText(Canvas canvas, Rect rtArea, String strText) {
-            int fontSize = rtArea.width() / 10;
+            int fontSize = (rtArea.width() / 10);
             Paint pnt = new Paint();
             pnt.setTextAlign(Paint.Align.CENTER);
             // 텍스트 폰트 크기를 지정
@@ -177,7 +177,7 @@ public class LadderGameActivity extends AppCompatActivity {
             // 텍스트 폰트 컬러를 지정
             pnt.setARGB(255, 0, 0, 64);
             // 캔버스에 텍스트를 출력
-            canvas.drawText(strText, rtArea.centerX(), rtArea.centerY() + fontSize / 3, pnt);
+            canvas.drawText(strText, rtArea.centerX(), rtArea.centerY() + (fontSize / 3), pnt);
         }
 
         // 둥근 사각형 그리기
@@ -186,9 +186,9 @@ public class LadderGameActivity extends AppCompatActivity {
             pnt.setStyle(Paint.Style.FILL);
             pnt.setColor(colorBack);
 
-            canvas.drawCircle(rtArea.left + (rtArea.height() / 2), rtArea.centerY(), rtArea.height() / 2, pnt);
-            canvas.drawCircle(rtArea.right - (rtArea.height() / 2), rtArea.centerY(), rtArea.height() / 2, pnt);
-            canvas.drawRect(rtArea.left + (rtArea.height() / 2), rtArea.top, rtArea.right - (rtArea.height() / 2), rtArea.bottom, pnt);
+            canvas.drawCircle((rtArea.left + (rtArea.height() / 2)), rtArea.centerY(), rtArea.height() / 2, pnt);
+            canvas.drawCircle((rtArea.right - (rtArea.height() / 2)), rtArea.centerY(), rtArea.height() / 2, pnt);
+            canvas.drawRect((rtArea.left + (rtArea.height() / 2)), rtArea.top, (rtArea.right - (rtArea.height() / 2)), rtArea.bottom, pnt);
         }
 
         // 게임 정보를 생성
@@ -203,7 +203,7 @@ public class LadderGameActivity extends AppCompatActivity {
             Rect rtLadder = getLadderArea();
 
             // 인원수에 비례해서 수평바를 생성
-            for(int i=0; i < mPeopleMax*2; i++) {
+            for (int i = 0; i < mPeopleMax * 2; i++) {
                 Point ptHBar = new Point();
                 // 수평바 왼쪽 위치를 랜덤으로 생성
                 ptHBar.x = getRandomMath(mPeopleMax - 1, 0);
@@ -221,18 +221,20 @@ public class LadderGameActivity extends AppCompatActivity {
 
         // 수평바 그리기
         public void drawHbar(Canvas canvas) {
-            if( mArHBar == null) return;
+            if (mArHBar == null){
+                return;
+            }
             Paint pnt = new Paint();
             pnt.setStyle(Paint.Style.STROKE);
             pnt.setStrokeWidth(mCanvasW / 80);
             pnt.setColor(Color.rgb(255, 100, 100));
 
-            for(int i=0; i < mArHBar.size(); i++ ) {
+            for (int i = 0; i < mArHBar.size(); i++ ) {
                 Point ptHBar = mArHBar.get(i);
                 // 사다리 부분 영역 좌표를 반환
                 Rect ladderPart = getLadderPartArea(ptHBar.x);
 
-                canvas.drawLine(ladderPart.centerX(), ptHBar.y, ladderPart.centerX()+ladderPart.width(), ptHBar.y, pnt);
+                canvas.drawLine(ladderPart.centerX(), ptHBar.y, ladderPart.centerX() + ladderPart.width(), ptHBar.y, pnt);
             }
         }
 
@@ -246,9 +248,9 @@ public class LadderGameActivity extends AppCompatActivity {
             /*rtLadderPart.bottom = rtLadderPart.top;
             rtLadderPart.top = 0;
             return rtLadderPart;*/
-            Rect rtPeople = new Rect( rtLadderPart );
+            Rect rtPeople = new Rect(rtLadderPart);
             rtPeople.top = pi.mPosition.y;
-            rtPeople.bottom = rtPeople.top + rtLadderPart.top;
+            rtPeople.bottom = (rtPeople.top + rtLadderPart.top);
             rtPeople.left += pi.mOffsetH;
             rtPeople.right += pi.mOffsetH;
             return rtPeople;
@@ -256,7 +258,7 @@ public class LadderGameActivity extends AppCompatActivity {
 
         // 사람 그리기
         public void drawPeople(Canvas canvas) {
-            for( int i=0; i < mPeopleMax; i++) {
+            for (int i = 0; i < mPeopleMax; i++) {
                 // 사람 개별 영역 좌표를 반환
                 Rect rtPresentPart = getPeoplePartArea(i);
                 // 둥근 사각형 그리기
@@ -275,10 +277,11 @@ public class LadderGameActivity extends AppCompatActivity {
 
     // 게임 완료 여부를 구해서 반환
     public boolean isCompleted() {
-        for(int i=0; i < mArPeople.size(); i++) {
+        for (int i = 0; i < mArPeople.size(); i++) {
             PeopleInfo pi = mArPeople.get(i);
-            if( pi.mFinished == false )
+            if (pi.mFinished == false) {
                 return false;
+            }
         }
         return true;
     }
@@ -316,18 +319,19 @@ public class LadderGameActivity extends AppCompatActivity {
 
         // 사다리 이동
         public void move() {
-            if( mFinished )
+            if (mFinished) {
                 return;
+            }
             // 사다리 영역 좌표를 반환
             //Rect rtLadder = getLadderArea();
             Rect rtLadderPart = getLadderPartArea(mPosition.x);
             // 수평 이동 체크
-            if( mOffsetH != 0 ) {
+            if (mOffsetH != 0) {
                 // 오른쪽으로 이동중이라면
-                if( mOffsetH > 0 ) {
+                if (mOffsetH > 0) {
                     mOffsetH += mMoveUnitH;
                     // 수평 이동이 끝났다면
-                    if( mOffsetH > rtLadderPart.width() ) {
+                    if (mOffsetH > rtLadderPart.width()) {
                         mOffsetH = 0;
                         mPosition.x ++;
                     }
@@ -336,7 +340,7 @@ public class LadderGameActivity extends AppCompatActivity {
                 else {
                     mOffsetH -= mMoveUnitH;
                     // 수평 이동이 끝났다면
-                    if( Math.abs(mOffsetH) > rtLadderPart.width() ) {
+                    if (Math.abs(mOffsetH) > rtLadderPart.width()) {
                         mOffsetH = 0;
                         mPosition.x --;
                     }
@@ -350,15 +354,15 @@ public class LadderGameActivity extends AppCompatActivity {
             // 사람 영역의 수직 중심점
             int peopleY = mPosition.y + (rtLadderPart.top / 2);
 
-            for(int i=0; i < mArHBar.size(); i++) {
+            for (int i = 0; i < mArHBar.size(); i++) {
                 Point ptHBar = mArHBar.get(i);
                 // 수평바를 만났다면
-                if( ptHBar.y <= peopleY && ptHBar.y > (peopleY - mMoveUnitV) ) {
+                if (ptHBar.y <= peopleY && ptHBar.y > peopleY - mMoveUnitV) {
                     // 수평 위치를 변경
-                    if( mPosition.x == ptHBar.x ) {
+                    if (mPosition.x == ptHBar.x) {
                         mOffsetH = mMoveUnitH;
                     }
-                    else if( mPosition.x == ptHBar.x+1 ) {
+                    else if (mPosition.x == ptHBar.x+1) {
                         mOffsetH = mMoveUnitH * -1;
                     }
                     // 좌우에 있는 수평바에 아니라면 무시
@@ -372,7 +376,7 @@ public class LadderGameActivity extends AppCompatActivity {
                 }
             }
 
-            if( mPosition.y >= rtLadderPart.bottom ) {
+            if(mPosition.y >= rtLadderPart.bottom) {
                 mPosition.y = rtLadderPart.bottom;
                 mFinished = true;
             }
@@ -382,7 +386,7 @@ public class LadderGameActivity extends AppCompatActivity {
     // 타이머 이벤트를 위한 핸들러 객체 생성 & 이벤트 함수 재정의
     Handler mTimer = new Handler() {
         public void handleMessage(Message msg) {
-            for(int i=0; i < mArPeople.size(); i++ ) {
+            for (int i = 0; i < mArPeople.size(); i++ ) {
                 mArPeople.get(i).move();
             }
 
@@ -390,7 +394,7 @@ public class LadderGameActivity extends AppCompatActivity {
             mainView.invalidate();
 
             // 게임이 완료되지 않았다면 타이머 재시작
-            if( isCompleted() == false ) {
+            if (isCompleted() == false) {
                 // 타이머 재시작
                 mTimer.sendEmptyMessageDelayed(0, 30);
             }
@@ -410,9 +414,9 @@ public class LadderGameActivity extends AppCompatActivity {
         intent.putExtra("PeopleMax", mPeopleMax);
 
         // Intent 에 사람-벌칙 매칭 정보를 입력
-        for(int i=0; i < mPeopleMax; i++) {
-            intent.putExtra("Result" + i, mArPeople.get(i).mName
-                    + " - " + mArPresent.get( mArPeople.get(i).mPosition.x ));
+        for (int i = 0; i < mPeopleMax; i++) {
+            intent.putExtra("Result" + i, (mArPeople.get(i).mName
+                    + " - " + mArPresent.get(mArPeople.get(i).mPosition.x)));
         }
 
         startActivity(intent);

@@ -32,9 +32,10 @@ public class ResultActivity extends AppCompatActivity {
     // ListView 위젯에 결과 항목을 추가
     public void initListView(Intent intent) {
         int peopleMax = intent.getIntExtra("PeopleMax", 0);
-        if( peopleMax < 2 )
+        if (peopleMax < 2) {
             return;
-        for(int i=0; i < peopleMax; i++) {
+        }
+        for (int i = 0; i < peopleMax; i++) {
             String strResult = intent.getStringExtra("Result" + i);
             mArResult.add(strResult);
         }

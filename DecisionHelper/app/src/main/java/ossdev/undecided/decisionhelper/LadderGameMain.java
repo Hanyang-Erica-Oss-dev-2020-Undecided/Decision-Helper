@@ -41,20 +41,22 @@ public class LadderGameMain extends AppCompatActivity {
 
     // ListView 를 초기화
     public void initListView() {
-        if( mArMember != null ) {
+        if (mArMember != null) {
             mArMember.clear();
             mArMember = null;
         }
         // ArrayList 배열 객체를 생성
         mArMember = new ArrayList<MyItem>();
 
-        if( MyAdapter != null ) MyAdapter = null;
+        if (MyAdapter != null) {
+            MyAdapter = null;
+        }
         // 어댑터 객체를 생성해서 ListView 에 지정
         MyAdapter = new MyListAdapter(this, R.layout.custom_list_item,
                 mArMember);
 
         // ListView 위젯의 핸들을 구해서 멤버변수에 저장
-        mListMember = (ListView) findViewById(R.id.listMember);
+        mListMember = (ListView)findViewById(R.id.listMember);
         // ListView 의 어댑터를 지정
         mListMember.setAdapter(MyAdapter);
     }
@@ -91,7 +93,7 @@ public class LadderGameMain extends AppCompatActivity {
         // 생성자 함수에서 멤버변수 초기화
         MyListAdapter(Context context, int alayout, ArrayList<MyItem> aarSrc) {
             mMaincon = context;
-            mInflater = (LayoutInflater) context.getSystemService(
+            mInflater = (LayoutInflater)context.getSystemService(
                     Context.LAYOUT_INFLATER_SERVICE);
             mArSrc = aarSrc;
             layout = alayout;
@@ -117,33 +119,35 @@ public class LadderGameMain extends AppCompatActivity {
             // 데이터 배열에서 해당 항목을 구한다
             MyItem mi = mArSrc.get(position);
             // 항목 Layout 이 아직 생성되지 않았다면 생성한다
-            if( mi.mLayoutItem == null )
+            if (mi.mLayoutItem == null) {
                 mi.mLayoutItem = mInflater.inflate(layout, null);
+            }
 
             // 문자열을 구한다
             String strText = mi.mTitle;
 
             // 1번째 TextView 에 데이터 입력
-            TextView textView1 = (TextView) mi.mLayoutItem.findViewById(R.id.text1);
+            TextView textView1 = (TextView)mi.mLayoutItem.findViewById(R.id.text1);
             textView1.setText(strText);
 
             // EditText 의 핸들을 ArrayList 에 저장
-            mi.mEditName = (EditText) mi.mLayoutItem.findViewById(R.id.editName);
+            mi.mEditName = (EditText)mi.mLayoutItem.findViewById(R.id.editName);
 
             // EditText 에 임시 데이터 입력
-            if( mi.mEditName.getText().toString().length() < 1 ) {
+            if (mi.mEditName.getText().toString().length() < 1) {
                 // 사람 이름 일때
-                if( position <= mPeopleMax )
+                if (position <= mPeopleMax) {
                     mi.mEditName.setText("Add Menu");
+                }
                     // 벌칙 이름 일때
                 else {
-                    int index = position - mPeopleMax - 1;
+                    int index = (position - mPeopleMax - 1);
                     mi.mEditName.setText("순위" + index);
                 }
             }
 
             // 타이틀이면 EditText 를 감춘다
-            if( mArSrc.get(position).mIsTitle ) {
+            if (mArSrc.get(position).mIsTitle) {
                 textView1.setTextColor(Color.rgb(0,0,192));
                 mi.mEditName.setVisibility(View.INVISIBLE);
             }
@@ -166,8 +170,8 @@ public class LadderGameMain extends AppCompatActivity {
         mArMember.add(mi);
 
         // 이름 개수 만큼 항목 추가
-        for(int i=0; i < mPeopleMax; i++) {
-            mi = new MyItem("항목 " + (i+1), false);
+        for (int i = 0; i < mPeopleMax; i++) {
+            mi = new MyItem(("항목 " + (i+1)), false);
             mArMember.add(mi);
         }
 
@@ -176,8 +180,8 @@ public class LadderGameMain extends AppCompatActivity {
         mArMember.add(mi);
 
         // 벌칙 개수 만큼 항목 추가
-        for(int i=0; i < mPeopleMax; i++) {
-            mi = new MyItem("순위 "+(i+1), false);
+        for (int i = 0; i < mPeopleMax; i++) {
+            mi = new MyItem(("순위 " + (i + 1)), false);
             mArMember.add(mi);
         }
 
@@ -193,18 +197,20 @@ public class LadderGameMain extends AppCompatActivity {
 
     // Button 클릭 이벤트 함수
     public void onClick(View v) {
-        switch( v.getId() ) {
+        switch (v.getId()) {
             case R.id.btnMinus :       // 인원수 감소
                 mPeopleMax --;
-                if( mPeopleMax < 2 )
+                if (mPeopleMax < 2) {
                     mPeopleMax = 2;
+                }
                 // 최대 인원수를 화면에 표시
                 showPeopleMax();
                 break;
             case R.id.btnPlus :         // 인원수 증가
                 mPeopleMax ++;
-                if( mPeopleMax > 10 )
+                if (mPeopleMax > 10) {
                     mPeopleMax = 10;
+                }
                 // 최대 인원수르 화면에 표시
                 showPeopleMax();
                 break;
@@ -224,10 +230,10 @@ public class LadderGameMain extends AppCompatActivity {
         // Intent 에 인원수를 입력
         intent.putExtra("PeopleMax", mPeopleMax);
 
-        for(int i=1; i < mArMember.size(); i++) {
+        for (int i = 1; i < mArMember.size(); i++) {
             MyItem mi = mArMember.get(i);
             // '벌칙 입력' 제목을 만나면 무시
-            if( mi.mIsTitle ) {
+            if (mi.mIsTitle) {
                 isPresent = true;
                 itemNumber = 0;
                 continue;
@@ -235,20 +241,24 @@ public class LadderGameMain extends AppCompatActivity {
 
             String strEdit = "aaaa";
             // '이름' 항목일때
-            if( isPresent == false ) {
-                if( mi.mEditName == null )
-                    strEdit = "항목 " + (itemNumber+1);
-                else
+            if (isPresent == false) {
+                if (mi.mEditName == null) {
+                    strEdit = "항목 " + (itemNumber + 1);
+                }
+                else {
                     strEdit = mi.mEditName.getText().toString();
+                }
                 intent.putExtra("항목" + itemNumber, strEdit);
             }
             // '벌칙' 항목일때
             else {
-                if( mi.mEditName == null )
-                    strEdit = "순위"+(itemNumber+1);
-                else
+                if (mi.mEditName == null) {
+                    strEdit = "순위" + (itemNumber + 1);
+                }
+                else {
                     strEdit = mi.mEditName.getText().toString();
-                intent.putExtra("순위"+itemNumber, strEdit);
+                }
+                intent.putExtra("순위" + itemNumber, strEdit);
             }
             itemNumber ++;
         }

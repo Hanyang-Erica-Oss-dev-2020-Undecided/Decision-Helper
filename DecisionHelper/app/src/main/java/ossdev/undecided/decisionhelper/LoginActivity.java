@@ -60,27 +60,29 @@ public class LoginActivity extends AppCompatActivity {
                             Log.v("결과", String.valueOf(jsonObject));
                             boolean success = jsonObject.getBoolean("success");
                             Log.v("결과", String.valueOf(success));
-                            if(success){
-                                String userID = jsonObject.getString( "userID" );
-                                String userPass = jsonObject.getString( "userPassword" );
-                                String userName = jsonObject.getString( "userName" );
-                                String userAge = jsonObject.getString( "userAge" );
+                            if (success){
+                                String userID = jsonObject.getString("userID");
+                                String userPass = jsonObject.getString("userPassword");
+                                String userName = jsonObject.getString("userName");
+                                String userAge = jsonObject.getString("userAge");
 
-                                Toast.makeText( getApplicationContext(), "로그인 성공", Toast.LENGTH_SHORT ).show();
-                                Intent intent = new Intent( LoginActivity.this, MainActivity.class );
+                                Toast.makeText(getApplicationContext(), "로그인 성공", Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
 
-                                intent.putExtra( "userID", userID );
-                                intent.putExtra( "userPass", userPass );
-                                intent.putExtra( "userName", userName );
-                                intent.putExtra( "userAge", userAge );
+                                intent.putExtra("userID", userID);
+                                intent.putExtra("userPass", userPass);
+                                intent.putExtra("userName", userName);
+                                intent.putExtra("userAge", userAge);
 
-                                startActivity( intent );
-                            } else{
+                                startActivity(intent);
+                            }
+                            else {
                                 Log.v(tag,"뜨지마라뜨지마라뜨지마라");
                                 Toast.makeText(getApplicationContext(),"로그인에 실패하셨습니다.", Toast.LENGTH_SHORT).show();
                                 return;
                             }
-                        } catch (JSONException e) {
+                        }
+                        catch (JSONException e) {
                             e.printStackTrace();
                         }
 
