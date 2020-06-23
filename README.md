@@ -3,12 +3,12 @@ What are we going to eat today? What will I do tomorrow? Do you have any difficu
 
 This application will help you choose.
 ## contents ##
-+ [Information](information)
-+ [Documentation](documentation)
-+ [Contribute](contribute)
-+ [Web Site](web-site)
-+ [Team](team)
-+ [License](license)
++ [Information](#information)
++ [Documentation](#documentation)
++ [Contribute](#contribute)
++ [Web Site](#web-site)
++ [Team](#team)
++ [License](#license)
 
 ## Information ##
 Version : 1.0
