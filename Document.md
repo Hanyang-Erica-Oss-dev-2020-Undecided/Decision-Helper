@@ -8,19 +8,19 @@ If you want to report a bug, ask a question, get more information, [Click](https
 - [Structure](#structure)
     * [Languages](#languages)
     * [DecisionHelper](#decisionhelper)
-　　* [License](#license)
-　　* [README.md](#readme.md)
-　　* [Contribute.md](#contribute.md)
+    * [Contribute.md](#contribute.md)
+	* [License](#license)
+	* [README.md](#readme.md)
 
 ## Structure
 Decision-Helper
 ```
-た-------DecisionHelper
-た-------LICENSE
-た-------CodingCovention.md
-た-------OurpProject.md
-た-------README.md
-た-------contribute.md
+- DecisionHelper
+- LICENSE
+- CodingCovention.md
+- OurpProject.md
+- README.md
+- contribute.md
 ```
 
 |File/Folder|Description|
@@ -38,14 +38,14 @@ Java, XML is used in this code
 ## DecisionHelper
 
 ```
-た-------LadderGameActivity.java
-た-------LadeerGameMain.java
-た-------LoginActivity.java
-た-------LoginRequest.java
-た-------MainActivity.java
-た-------RegisterActivity.java
-た-------RegisterRequest.java
-た-------ResultActivity.java
+- LadderGameActivity.java
+- LadeerGameMain.java
+- LoginActivity.java
+- LoginRequest.java
+- MainActivity.java
+- RegisterActivity.java
+- RegisterRequest.java
+- ResultActivity.java
 ```
 
 |File/Folder|Description|
