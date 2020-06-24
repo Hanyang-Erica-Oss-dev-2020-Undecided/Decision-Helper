@@ -8,6 +8,7 @@ If you want to report a bug, ask a question, get more information, [Click](https
 - [Structure](#structure)
     * [Languages](#languages)
     * [DecisionHelper](#decisionhelper)
+    * [DataBase](#database)
     * [Contribute.md](#contribute.md)
 	* [License](#license)
 	* [README.md](#readme.md)
@@ -58,6 +59,20 @@ Java, XML is used in this code
 |**RegisterActivity.java**|Contains file that the process of registering users to become users in the app|
 |** RegisterRequest.java **|Contains file that stores information registered as a user in the app|
 |**ResultActivity.java**|Contains file that the ladder game ends and shows the result after you launch the app|
+
+## DataBase
+ How did we use DB
+
+```
+- FTP
+  - we used Filezilla to use FTP
+- Hosting
+  - we used Dothome to host domain
+```
+
+we only used DataBase for Login and Register.
+ 
+
 
 ## License
 File the guarantees the license of our web(MIT).
