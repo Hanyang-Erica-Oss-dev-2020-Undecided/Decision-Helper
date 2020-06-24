@@ -15,12 +15,12 @@ If you want to report a bug, ask a question, get more information, [Click](https
 ## Structure
 Decision-Helper
 ```
-戍式式式式DecisionHelper
-戍式式式式LICENSE
-戍式式式式CodingCovention.md
-戍式式式式OurpProject.md
-戍式式式式README.md
-戌式式式式contribute.md
+凶-------DecisionHelper
+凶-------LICENSE
+凶-------CodingCovention.md
+凶-------OurpProject.md
+凶-------README.md
+凶-------contribute.md
 ```
 
 |File/Folder|Description|
@@ -38,14 +38,14 @@ Java, XML is used in this code
 ## DecisionHelper
 
 ```
-戍式式式式LadderGameActivity.java
-戍式式式式LadeerGameMain.java
-戍式式式式LoginActivity.java
-戍式式式式LoginRequest.java
-戍式式式式MainActivity.java
-戍式式式式RegisterActivity.java
-戍式式式式RegisterRequest.java
-戌式式式式ResultActivity.java
+凶-------LadderGameActivity.java
+凶-------LadeerGameMain.java
+凶-------LoginActivity.java
+凶-------LoginRequest.java
+凶-------MainActivity.java
+凶-------RegisterActivity.java
+凶-------RegisterRequest.java
+凶-------ResultActivity.java
 ```
 
 |File/Folder|Description|
