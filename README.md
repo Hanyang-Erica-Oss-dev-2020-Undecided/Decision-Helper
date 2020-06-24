@@ -12,9 +12,7 @@ This application will help you choose.
 
 ## Information ##
 Version : 1.0
-- How to Install 
-
-- How to use
+- [install_apk](https://github.com/sonhl0723/Decision-Helper/raw/develop/app-debug.apk)
 
 ## Documentation ##
 + [Developer-Document](https://github.com/sonhl0723/Decision-Helper/blob/develop/Document.md)
