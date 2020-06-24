@@ -49,15 +49,17 @@ public class RegisterActivity extends AppCompatActivity {
                         try {
                             JSONObject jsonObject = new JSONObject(response);
                             boolean success = jsonObject.getBoolean("success");
-                            if(success){
+                            if (success){
                                 Toast.makeText(getApplicationContext(),"회원 등록에 성공하셨습니다.", Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
                                 startActivity(intent);
-                            } else{
+                            }
+                            else {
                                 Toast.makeText(getApplicationContext(),"회원 등록에 실패하셨습니다.", Toast.LENGTH_SHORT).show();
                                 return;
                             }
-                        } catch (JSONException e) {
+                        }
+                        catch (JSONException e) {
                             e.printStackTrace();
                         }
 
