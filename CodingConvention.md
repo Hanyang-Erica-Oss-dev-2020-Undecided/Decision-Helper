@@ -107,28 +107,11 @@ Examples:
 3.1 Do not use 'do..while'
 + 'do..while' statement is a syntax that is not easy to read and unfamiliar to less experienced programmers because the condition is at the bottom of the code.
 
-3.2 Do not use 'return' in the middle of the method.
-+ return is used at the end of the method.
-+ If the return is in the middle, there are many things to consider when modifying a method and the possibility of causing a bug increases.
+3.2 Do not use 'continue'
 
-3.3 Do not use 'continue'
+3.3 Break is not used in control statements other than switches.
 
-3.4 Break is not used in control statements other than switches.
-
-3.5 The increment operator is used on separate lines
-```java 
-Examples:
-    foo(x++); // NO!
-
-    foo(x);   // YES!
-    x++;
-
-    y += 100 * x++;  // NO!
-
-    y += 100 * x;    // YES!
-    x++;
-```
-3.6 Reset
+3.4 Reset
 + Declare a variable close to where it is used.
 ```java
 Examples:
@@ -150,7 +133,7 @@ Examples:
     doBar(firstWide, secondWide);
     int totalWide = firstWide + secondWide;     //  even better!
 ```
-3.7 Access
+3.5 Access
 + All fields except constants must be private.
 ---
 
