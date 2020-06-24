@@ -8,9 +8,9 @@ If you want to report a bug, ask a question, get more information, [Click](https
 - [Structure](#structure)
     * [Languages](#languages)
     * [DecisionHelper](#decisionhelper)
-    * [Contribute.md](#contribute.md)
+    * [Contribute.md](#contributemd)
 	* [License](#license)
-	* [README.md](#readme.md)
+	* [README.md](#readmemd)
 
 ## Structure
 Decision-Helper
@@ -56,7 +56,7 @@ Java, XML is used in this code
 |**LoginRequest.java**|Contains file that implements a screen to log in|
 |**MainActivity.java**|Contains file that implement the screen when the app is first launched|
 |**RegisterActivity.java**|Contains file that the process of registering users to become users in the app|
-|** RegisterRequest.java **|Contains file that stores information registered as a user in the app|
+|**RegisterRequest.java**|Contains file that stores information registered as a user in the app|
 |**ResultActivity.java**|Contains file that the ladder game ends and shows the result after you launch the app|
 
 ## License
