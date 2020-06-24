@@ -12,7 +12,7 @@ This application will help you choose.
 
 ## Information ##
 Version : 1.0
-- [install_apk](Decision-Helper/app-debug.apk)
+- [install_apk](./app-debug.apk)
 
 ## Documentation ##
 + [Developer-Document](https://github.com/sonhl0723/Decision-Helper/blob/develop/Document.md)
