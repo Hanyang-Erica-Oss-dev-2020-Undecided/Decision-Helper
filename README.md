@@ -1,5 +1,5 @@
 # Decision-Helper #
-What are we going to eat today? What will I do tomorrow? Do you have any difficulty choosing? 
+What are we going to eat today? What will I do tomorrow? Do you have any difficulty choosing?
 
 This application will help you choose.
 ## contents ##
@@ -15,7 +15,7 @@ Version : 1.0
 - [install_apk](https://github.com/sonhl0723/Decision-Helper/raw/develop/app-debug.apk)
 
 ## Documentation ##
-+ [Developer-Document](https://github.com/sonhl0723/Decision-Helper/blob/develop/Document.md)
++ [Developer-Document](https://github.com/sonhl0723/Decision-Helper/blob/develop/DeveloperDocument.md)
 + [Coding-Convention](https://github.com/Hanyang-Erica-Oss-dev-2020-Undecided/Decision-Helper/blob/develop/CodingConvention.md)
 
 ## Contribute ##
@@ -48,5 +48,3 @@ Version : 1.0
 > WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 > See the License for the specific language governing permissions and
 > limitations under the License.
-
-
