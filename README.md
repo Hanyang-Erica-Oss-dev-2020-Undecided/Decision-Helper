@@ -12,14 +12,14 @@ This application will help you choose.
 
 ## Information ##
 Version : 1.0
-- [install_apk](https://github.com/sonhl0723/Decision-Helper/raw/develop/app-debug.apk)
+- [install_apk](https://github.com/Hanyang-Erica-Oss-dev-2020-Undecided/Decision-Helper/blob/master/app-debug.apk)
 
 ## Documentation ##
-+ [Developer-Document](https://github.com/Hanyang-Erica-Oss-dev-2020-Undecided/Decision-Helper/blob/develop/DeveloperDocument.md)
-+ [Coding-Convention](https://github.com/Hanyang-Erica-Oss-dev-2020-Undecided/Decision-Helper/blob/develop/CodingConvention.md)
++ [Developer-Document](https://github.com/Hanyang-Erica-Oss-dev-2020-Undecided/Decision-Helper/blob/master/DeveloperDocument.md)
++ [Coding-Convention](https://github.com/Hanyang-Erica-Oss-dev-2020-Undecided/Decision-Helper/blob/master/CodingConvention.md)
 
 ## Contribute ##
-[Contribute](https://github.com/Hanyang-Erica-Oss-dev-2020-Undecided/Decision-Helper/blob/develop/contribute.md)
+[Contribute](https://github.com/Hanyang-Erica-Oss-dev-2020-Undecided/Decision-Helper/blob/master/contribute.md)
 
 ## Web Site ##
 [Web](https://hanyang-erica-oss-dev-2020-undecided.github.io/DecisionHelper_Webpage/theme/index.html)
@@ -36,7 +36,7 @@ Version : 1.0
 
 
 ## License ##
-[Apache 2.0](https://github.com/nadasansu/Decision-Helper/blob/develop/LICENSE)
+[Apache 2.0](https://github.com/Hanyang-Erica-Oss-dev-2020-Undecided/Decision-Helper/blob/master/LICENSE)
 > Licensed under the Apache License, Version 2.0 (the "License");
 > you may not use this work except in compliance with the License.
 > You may obtain a copy of the License in the LICENSE file, or at:
