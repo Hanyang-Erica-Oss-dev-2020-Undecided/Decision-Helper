@@ -15,7 +15,7 @@ Version : 1.0
 - [install_apk](https://github.com/sonhl0723/Decision-Helper/raw/develop/app-debug.apk)
 
 ## Documentation ##
-+ [Developer-Document](https://github.com/sonhl0723/Decision-Helper/blob/develop/DeveloperDocument.md)
++ [Developer-Document](https://github.com/Hanyang-Erica-Oss-dev-2020-Undecided/Decision-Helper/blob/develop/DeveloperDocument.md)
 + [Coding-Convention](https://github.com/Hanyang-Erica-Oss-dev-2020-Undecided/Decision-Helper/blob/develop/CodingConvention.md)
 
 ## Contribute ##
