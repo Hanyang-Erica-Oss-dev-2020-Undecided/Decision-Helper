@@ -12,7 +12,8 @@ This application will help you choose.
 
 ## Information ##
 Version : 1.0
-- [install_apk](https://github.com/Hanyang-Erica-Oss-dev-2020-Undecided/Decision-Helper/blob/master/app-debug.apk)
+- [install_apk](https://github.com/Hanyang-Erica-Oss-dev-2020-Undecided/Decision-Helper/raw/master/app-debug.apk)
+
 
 ## Documentation ##
 + [Developer-Document](https://github.com/Hanyang-Erica-Oss-dev-2020-Undecided/Decision-Helper/blob/master/DeveloperDocument.md)
